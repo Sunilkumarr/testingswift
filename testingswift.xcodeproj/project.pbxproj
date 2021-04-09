@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		189E44C1260144F100B6B3F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189E44BF260144F100B6B3F1 /* LaunchScreen.storyboard */; };
 		189E44CC260144F200B6B3F1 /* testingswiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E44CB260144F200B6B3F1 /* testingswiftTests.swift */; };
 		189E44D7260144F200B6B3F1 /* testingswiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E44D6260144F200B6B3F1 /* testingswiftUITests.swift */; };
+		18A3269C2620717500B545CF /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 18A3269B2620717500B545CF /* SwiftPackageProductDependency */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A3269C2620717500B545CF /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +149,9 @@
 			dependencies = (
 			);
 			name = testingswift;
+			packageProductDependencies = (
+				18A3269B2620717500B545CF /* SwiftPackageProductDependency */,
+			);
 			productName = testingswift;
 			productReference = 189E44AE260144EA00B6B3F1 /* testingswift.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 189E44A5260144EA00B6B3F1;
+			packageReferences = (
+				18A3269A2620717500B545CF /* RemoteSwiftPackageReference */,
+			);
 			productRefGroup = 189E44AF260144EA00B6B3F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -438,6 +446,7 @@
 		189E44DC260144F200B6B3F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -456,6 +465,7 @@
 		189E44DD260144F200B6B3F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -591,6 +601,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18A3269A2620717500B545CF /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppLozic/Applozic-Chat-iOS-Framework.git";
+			requirement = {
+				branch = "release-8.1.0";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18A3269B2620717500B545CF /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18A3269A2620717500B545CF /* RemoteSwiftPackageReference */;
+			productName = ApplozicCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		189E44BA260144EA00B6B3F1 /* testingswift.xcdatamodeld */ = {
